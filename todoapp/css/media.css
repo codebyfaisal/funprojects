@@ -1,0 +1,7 @@
+@media (width < 510px) {
+    .to-do-container {
+        width: 98vw;
+        background: linear-gradient(to bottom, #00115ec4, #00385ed0);
+        box-shadow: 0 0 1rem 0 #000e4b;
+    }
+}

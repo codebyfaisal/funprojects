@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* * ------------ Base line ------------ * */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Layout */
+body {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  padding-top: 10%;
+  background-image: url(../Assets/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* State */
+.to-do-container {
+  width: 26rem;
+  padding: 0 1rem 1rem;
+  color: white;
+  border-radius: 0.3rem;
+  background: linear-gradient(to bottom, #005b5e9a, #005e5eea);
+  box-shadow: 0 0 1rem 0 #00858a;
+}
+
+.to-do-container h1 {
+  padding: 1rem;
+  justify-content: start;
+  gap: 1rem;
+
+}
+
+.to-do-container h1 img {
+  width: 3rem;
+}
+
+/* --------- */
+.input-container {
+  position: relative;
+  background-color: #fcb316;
+  border-radius: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.input-container input {
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  font-size: 1.1rem;
+}
+
+#input {
+  flex-basis: 80%;
+}
+
+#input:focus {
+  background-color: #f1bc47;
+}
+
+#add-task-btn {
+  flex-basis: 20%;
+  cursor: pointer;
+  border-radius: 0 0.3rem 0.3rem 0;
+  background-color: #FF4C4C;
+}
+
+.input-validation {
+  position: absolute;
+  bottom: -50%;
+  color: orange;
+  left: 1rem;
+  font-size: 0.7rem;
+}
+
+/* --------- */
+.to-do-list {
+  padding: 1rem 0 0;
+  flex-direction: column;
+}
+
+.task {
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  padding: 0.5rem;
+  padding-left: 3rem;
+  border-radius: 0.3rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.task:hover {
+  background-color: #000b3d71;
+}
+
+.task.checked {
+  text-decoration: line-through;
+}
+
+.task img {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+
+.task::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  background: url(../Assets/icons/uncheck.png);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.task.checked::before {
+  background: url(../Assets/icons/check.png);
+  background-position: center;
+  background-size: cover;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  background-color: #005b5ed2;
+  width: 100%;
+}
+footer a{
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Js Class */
+.none {
+  display: none;
+}

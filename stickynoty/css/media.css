@@ -1,0 +1,50 @@
+@media (width < 556px) {
+    .alert * {
+        font-size: 90% !important;
+    }
+
+    .alert-content {
+        width: 95%;
+    }
+
+    .app-container {
+        margin: 0;
+    }
+
+    .app-buttons {
+        padding: 1rem;
+        justify-content: space-evenly;
+        background-color: rgba(255, 166, 0, 0.445);
+    }
+
+    .app-buttons span {
+        display: none;
+    }
+
+    .notes {
+        margin: 2rem 0;
+        width: 100%;
+    }
+
+    footer a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (width <=760px) {
+    .logo {
+        order: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    #clear-all {order: 2;}
+    #add-note {order: 3;}
+
+
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: orange transparent;
+}

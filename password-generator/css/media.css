@@ -1,0 +1,11 @@
+@media (width < 500px){
+    .notification{
+        width: 95vw;
+        font-size: 95%;
+        padding: 1rem;
+    }
+    .password-generator {
+        width: 97vw;
+        margin-top: 2rem;
+    }   
+}

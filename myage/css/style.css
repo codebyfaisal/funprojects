@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* * ------------ Base line ------------ * */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* * ------------ Layout ------------ * */
+body {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* * ------------ Module / Reusable ---- * */
+/* Notification */
+.notification {
+    position: fixed;
+    width: max-content;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    background-color: rgba(3, 3, 3, 0.8);
+    box-shadow: 0 0 1rem 0 rgba(255, 229, 159, 0.411);
+    z-index: -100;
+    opacity: 0;
+    color: #eee;
+    transition: opacity 0.5s ease-in;
+}
+
+/* * ------------ States ------------ * */
+.app {
+    width: 25rem;
+    min-width: 25rem;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    height: max-content;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(137, 43, 226, 0.2);
+}
+
+input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 1rem 0 rgba(137, 43, 226, 0.1);
+    border-radius: 2rem;
+    -webkit-backdrop-filter: blur(1rem) saturate(100%);
+    backdrop-filter: blur(1rem) saturate(100%);
+    transition: all 0.3s ease;
+}
+
+input[type='date'] {
+    color: rgba(137, 43, 226, 0.356);
+    background-color: rgba(137, 43, 226, 0.103);
+}
+
+input[type='date']:focus {
+    color: #30003f;
+}
+
+input[type='button'] {
+    color: white;
+    font-weight: bolder;
+    background-color: blueviolet;
+}
+
+input[type='button']:hover {
+    background-color: rgb(112, 0, 216);
+}
+
+input[type='button']:active {
+    background-color: rgb(58, 0, 216);
+}
+
+.age span{
+    color: #33333370;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-wrap: wrap;
+}
+
+.none {
+    display: none;
+}

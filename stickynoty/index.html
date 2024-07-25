@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StickyNoty</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+  </head>
+
+  <body>
+    <main>
+
+      <div class="app-container">
+
+        <div class="app-buttons">
+          <button type="button" id="clear-all"><img src="./assets/icons/delete.png" alt="">
+            <span>Delete All Notes</span></button>
+          <h1 class="logo">StickyNoty</h1>
+          <button type="button" id="add-note"><img src="./assets/icons/add.png" alt="">
+            <span>Add Note</span></button>
+        </div>
+
+        <div class="notes"></div>
+
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Crafted with 💖 2024.
+        <a href="https://codebyfaisal.netlify.app/" target="_blank" rel="noopener">codebyfaisal</a>
+      </p>
+    </footer>
+
+    <!-- alerts -->
+    <div id="alert" class="alert none">
+      <div class="alert-content">
+        <p class="alert-note">Are you sure you want to clear all notes? This action will permanently delete all your
+          notes.</p>
+        <div class="alert-btn">
+          <button type="submit" alertResponse="0" class="alert-cancel">NO</button>
+          <button type="submit" alertResponse="1" class="alert-confirm">Yes</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+    <script type="module" src="./js/script.js"></script>
+
+  </body>
+
+</html>

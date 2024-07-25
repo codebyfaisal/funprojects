@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+  </head>
+
+  <body>
+    <div id="notification" class="notification"></div>
+    <main>
+
+      <div class="password-generator">
+        <div class="form-group">
+          <input type="text" id="get-password" title="input" placeholder="Generate Your Password" readonly>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+            <path
+              d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z" />
+          </svg>
+        </div>
+
+        <div class="form-group">
+          <input type="range" id="password-length" class="form-control" min="6" max="20" value="6">
+          <label for="password-length" class="show-password-length">6</label>
+        </div>
+
+        <div class="form-group">
+          <label for="upper-case">Include upperCase Letters</label>
+          <input type="checkbox" id="upper-case" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="lower-case">Include lowerCase Letters</label>
+          <input type="checkbox" id="lower-case" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="numbers">Include Numbers</label>
+          <input type="checkbox" id="numbers" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="symbols">Include Symbols</label>
+          <input type="checkbox" id="symbols" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <input type="button" id="generate-btn" class="form-control" value="Generate Password">
+        </div>
+
+
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Crafted with 💖 2024.
+        <a href="https://codebyfaisal.netlify.app/" target="_blank" rel="noopener">codebyfaisal</a>
+      </p>
+    </footer>
+    <script type="module" src="./js/script.js"></script>
+
+  </body>
+
+</html>
