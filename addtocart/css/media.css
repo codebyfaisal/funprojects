@@ -1,0 +1,27 @@
+@media(width<376px) {
+    .navbar {
+        padding: 1rem 0 0 0.3rem;
+    }
+}
+
+@media(width<576px) {
+    html {
+        font-size: 75%;
+    }
+
+    .navbar {
+        width: 100vw;
+        padding: 1rem;
+    }
+    
+    .cart-menu {
+        margin: 0 auto;
+        right: 10%;
+        /* min-height: max-content; */
+        width: 90vw;
+        max-width: 90vw;
+    }
+}
+/* 
+@media(width>=576px) {
+} */
