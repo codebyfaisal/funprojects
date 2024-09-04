@@ -17,7 +17,7 @@ Each directory in this repository represents a unique project. These projects ar
         - ✅ User-friendly interface
         - ✅ Responsive
    - Live Demo: [todoapp](https://codebyfaisal.github.io/funprojects/todoapp)
-   - Download release: [todoapp-0.1](https://github.com/codebyfaisal/funprojects/releases/download/todoapp-0.1/todoapp-0.1.zip)
+   - Download release: [todoapp ](https://github.com/codebyfaisal/funprojects/releases/download/todoapp/todoapp.zip)
 
 ----------
 ### Stickynoty
@@ -31,7 +31,7 @@ Each directory in this repository represents a unique project. These projects ar
         - ✅ Responsive
         - ✅ Save for letter use
    - Live Demo: [stickynoty](https://codebyfaisal.github.io/funprojects/stickynoty)
-   - Download release: [stickynoty-0.1](https://github.com/codebyfaisal/funprojects/releases/download/stickynoty-0.1/stickynoty-0.1.zip)
+   - Download release: [stickynoty ](https://github.com/codebyfaisal/funprojects/releases/download/stickynoty/stickynoty.zip)
 ----------
 ### PasswordGenerator
  - Description: A Password Generator web app using HTML, CSS and JavaScript
@@ -43,7 +43,30 @@ Each directory in this repository represents a unique project. These projects ar
         - ✅ User-friendly interface
         - ✅ Responsive
    - Live Demo: [Password Generator](https://codebyfaisal.github.io/funprojects/password-generator/)
-   - Download release: [password-generator-0.1](https://github.com/codebyfaisal/funprojects/releases/download/password-generator-0.1/password-generator-0.1.zip)
-
+   - Download release: [password-generator ](https://github.com/codebyfaisal/funprojects/releases/download/password-generator/password-generator.zip)
+----------
+### AddToCart
+ - **Description:** An Add to Cart web app with Wishlist functionality using HTML, CSS, and JavaScript.
+   - 🛒 **What's included?**
+        - ✅ Add products to the cart
+        - ✅ Manage quantity in the cart
+        - ✅ Add or remove items from the wishlist
+        - ✅ View total price and items in the cart
+        - ✅ Responsive design
+        - ✅ User-friendly interface
+   - **Live Demo:** [Add to Cart](https://your-username.github.io/ funprojects/addtocart/)
+   - **Download release:** [add-to-cart](https://github.com/your-username/funprojects/releases/download/add-to-cart/addtocart.zip)
+----------
+### MyAge
+ - **Description:** A web app to calculate age from date of birth using HTML, CSS, and JavaScript.
+   - 🗓️ **What's included?**
+        - ✅ Calculate age in years, months, and days
+        - ✅ User input for date of birth
+        - ✅ Real-time age calculation
+        - ✅ Notification system for alerts
+        - ✅ Responsive design
+        - ✅ User-friendly interface
+     - **Live Demo:** [Add to Cart](https://your-username.github.io/ funprojects/addtocart/)
+     - **Download release:** [add-to-cart](https://github.com/your-username/funprojects/releases/download/addtocart/addtocart.zip)
   --------
   Expore the repo ...
