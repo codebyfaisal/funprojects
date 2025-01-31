@@ -1,163 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FunProjects</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                margin: 0;
-                padding: 0;
-                color: #333;
-                background-color: #f4f4f4;
-            }
-
-            .container {
-                max-width: 800px;
-                margin: 0 auto;
-                padding: 20px;
-                background: #fff;
-                border-radius: 8px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
-
-            header {
-                text-align: center;
-            }
-
-            header h1 {
-                margin-top: 0;
-            }
-
-            .projects h2 {
-                border-bottom: 2px solid #333;
-                padding-bottom: 5px;
-            }
-
-            .project {
-                margin-bottom: 20px;
-            }
-
-            .project h3 {
-                margin-top: 0;
-            }
-
-            .features ul {
-                list-style-type: none;
-                padding: 0;
-            }
-
-            .features li {
-                margin-bottom: 5px;
-            }
-
-            a {
-                color: #007bff;
-                text-decoration: none;
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-
-            footer {
-                text-align: center;
-                margin: 20px 0;
-                font-size: 0.9em;
-                color: #666;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="container">
-            <header>
-                <h1>FunProjects</h1>
-                <p>Welcome to the FunProjects repository! This repository contains projects created for fun with 💖.
-                    While the projects may seem small or simple, they often explore interesting aspects of JavaScript
-                    and help deepen your understanding of the language.</p>
-            </header>
-
-            <section class="projects">
-                <h2>Overview</h2>
-                <p>Each directory in this repository represents a unique project. These projects are designed to be
-                    engaging and educational, demonstrating various JavaScript techniques and concepts. Below, you'll
-                    find links to live demos of these projects.</p>
-
-                <article class="project">
-                    <h3>TodoApp</h3>
-                    <p><strong>Description:</strong> The todoapp is built using HTML, CSS, and JavaScript.</p>
-                    <div class="features">
-                        <h4>🖥️ What's included?</h4>
-                        <ul>
-                            <li>✅ Add Task</li>
-                            <li>✅ Remove Task</li>
-                            <li>✅ Automatically Save for later</li>
-                            <li>✅ Stylish CSS for a polished look</li>
-                            <li>✅ User-friendly interface</li>
-                            <li>✅ Responsive</li>
-                        </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fun Projects Showcase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-title {
+            font-weight: bold;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Fun Projects Showcase</h1>
+        <div class="row g-4">
+            <!-- AddToCart -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">AddToCart</h5>
+                        <p class="card-text">A feature-rich Add to Cart web app with Wishlist functionality.</p>
+                        <a href="https://codebyfaisal.github.io/funprojects/addtocart/" class="btn btn-primary" target="_blank">View Live Demo</a>
                     </div>
-                    <p><strong>Live Demo:</strong> <a href="https://codebyfaisal.github.io/funprojects/todoapp"
-                            target="_blank">todoapp</a></p>
-                    <p><strong>Download release:</strong> <a
-                            href="https://github.com/codebyfaisal/funprojects/releases/download/todoapp-0.1/todoapp-0.1.zip"
-                            target="_blank">todoapp-0.1</a></p>
-                </article>
-
-                <article class="project">
-                    <h3>Stickynoty</h3>
-                    <p><strong>Description:</strong> A Sticky Notes saving web app using HTML, CSS, and JavaScript.</p>
-                    <div class="features">
-                        <h4>🖥️ What's included?</h4>
-                        <ul>
-                            <li>✅ Add New Note</li>
-                            <li>✅ Clear All notes</li>
-                            <li>✅ Save, delete, Copy and Paste feature</li>
-                            <li>✅ Stylish CSS for a polished look</li>
-                            <li>✅ User-friendly interface</li>
-                            <li>✅ Responsive</li>
-                            <li>✅ Save for later use</li>
-                        </ul>
+                </div>
+            </div>
+            <!-- Calculator -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Calculator</h5>
+                        <p class="card-text">A sleek and interactive calculator web app.</p>
+                        <a href="https://codebyfaisal.github.io/funprojects/calculator/" class="btn btn-primary" target="_blank">View Live Demo</a>
                     </div>
-                    <p><strong>Live Demo:</strong> <a href="https://codebyfaisal.github.io/funprojects/stickynoty"
-                            target="_blank">stickynoty</a></p>
-                    <p><strong>Download release:</strong> <a
-                            href="https://github.com/codebyfaisal/funprojects/releases/download/stickynoty-0.1/stickynoty-0.1.zip"
-                            target="_blank">stickynoty-0.1</a></p>
-                </article>
-
-                <article class="project">
-                    <h3>PasswordGenerator</h3>
-                    <p><strong>Description:</strong> A Password Generator web app using HTML, CSS, and JavaScript.</p>
-                    <div class="features">
-                        <h4>🖥️ What's included?</h4>
-                        <ul>
-                            <li>✅ Generate Password</li>
-                            <li>✅ Set Length of a password</li>
-                            <li>✅ Select Categories for password combination</li>
-                            <li>✅ Save to Clipboard</li>
-                            <li>✅ User-friendly interface</li>
-                            <li>✅ Responsive</li>
-                        </ul>
+                </div>
+            </div>
+            <!-- MyAge -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">MyAge</h5>
+                        <p class="card-text">A web app to calculate age from date of birth with precision.</p>
+                        <a href="https://codebyfaisal.github.io/funprojects/myage/" class="btn btn-primary" target="_blank">View Live Demo</a>
                     </div>
-                    <p><strong>Live Demo:</strong> <a
-                            href="https://codebyfaisal.github.io/funprojects/password-generator/"
-                            target="_blank">Password Generator</a></p>
-                    <p><strong>Download release:</strong> <a
-                            href="https://github.com/codebyfaisal/funprojects/releases/download/password-generator-0.1/password-generator-0.1.zip"
-                            target="_blank">password-generator-0.1</a></p>
-                </article>
-
-                <footer>
-                    <p>Explore the repo...</p>
-                    <a href="https://codebyfaisal.netlify.app" target="_blank">codebyfaisal</a>
-                </footer>
-            </section>
+                </div>
+            </div>
+            <!-- Password Generator -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Password Generator</h5>
+                        <p class="card-text">Generate secure passwords with customizable options.</p>
+                        <a href="https://codebyfaisal.github.io/funprojects/password-generator/" class="btn btn-primary" target="_blank">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Stickynoty -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Stickynoty</h5>
+                        <p class="card-text">A handy sticky notes app for quick note-taking.</p>
+                        <a href="https://codebyfaisal.github.io/funprojects/stickynoty/" class="btn btn-primary" target="_blank">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- TodoApp -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">TodoApp</h5>
+                        <p class="card-text">A well-designed to-do list application for productivity.</p>
+                        <a href="https://codebyfaisal.github.io/funprojects/todoapp/" class="btn btn-primary" target="_blank">View Live Demo</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </body>
-
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
