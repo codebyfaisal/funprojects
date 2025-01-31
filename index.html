@@ -1,94 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fun Projects Showcase</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configure Tailwind to use 'class' strategy for dark mode
+      tailwind.config = {
+        darkMode: "class", // Enable dark mode via class
+        theme: {
+          extend: {},
+        },
+      };
+    </script>
     <style>
-        body {
-            background-color: #f8f9fa;
+      /* Custom Gradient Background */
+      .dark.gradient-bg {
+        background: linear-gradient(135deg, #1e2024, #1d1f24, #000d1f);
+        background-size: 300% 300%;
+        animation: gradientBG 8s ease infinite;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #e4e4e4, #cccccc, #c0d6f5);
+        background-size: 300% 300%;
+        animation: gradientBG 8s ease infinite;
+      }
+      @keyframes gradientBG {
+        0% {
+          background-position: 0% 50%;
         }
-        .card {
-            transition: transform 0.3s ease-in-out;
+        50% {
+          background-position: 100% 50%;
         }
-        .card:hover {
-            transform: scale(1.05);
+        100% {
+          background-position: 0% 50%;
         }
-        .card-title {
-            font-weight: bold;
-        }
-        .btn-primary {
-            width: 100%;
-        }
+      }
     </style>
-</head>
-<body>
-    <div class="container py-5">
-        <h1 class="text-center mb-5">Fun Projects Showcase</h1>
-        <div class="row g-4">
-            <!-- AddToCart -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">AddToCart</h5>
-                        <p class="card-text">A feature-rich Add to Cart web app with Wishlist functionality.</p>
-                        <a href="https://codebyfaisal.github.io/funprojects/addtocart/" class="btn btn-primary" target="_blank">View Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Calculator -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Calculator</h5>
-                        <p class="card-text">A sleek and interactive calculator web app.</p>
-                        <a href="https://codebyfaisal.github.io/funprojects/calculator/" class="btn btn-primary" target="_blank">View Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- MyAge -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">MyAge</h5>
-                        <p class="card-text">A web app to calculate age from date of birth with precision.</p>
-                        <a href="https://codebyfaisal.github.io/funprojects/myage/" class="btn btn-primary" target="_blank">View Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Password Generator -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Password Generator</h5>
-                        <p class="card-text">Generate secure passwords with customizable options.</p>
-                        <a href="https://codebyfaisal.github.io/funprojects/password-generator/" class="btn btn-primary" target="_blank">View Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Stickynoty -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Stickynoty</h5>
-                        <p class="card-text">A handy sticky notes app for quick note-taking.</p>
-                        <a href="https://codebyfaisal.github.io/funprojects/stickynoty/" class="btn btn-primary" target="_blank">View Live Demo</a>
-                    </div>
-                </div>
-            </div>
-            <!-- TodoApp -->
-            <div class="col-lg-4 col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">TodoApp</h5>
-                        <p class="card-text">A well-designed to-do list application for productivity.</p>
-                        <a href="https://codebyfaisal.github.io/funprojects/todoapp/" class="btn btn-primary" target="_blank">View Live Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  </head>
+  <body
+    class="gradient-bg min-h-screen flex flex-col items-center justify-center"
+  >
+    <!-- Mode Switcher -->
+    <div class="fixed top-4 right-4 z-50">
+      <button
+        id="mode-toggle"
+        class="bg-black text-white px-4 py-2 rounded-md shadow-md hover:bg-black/70 transition-colors"
+      >
+        Switch to Light Mode
+      </button>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+    <div class="container mx-auto px-4 py-8">
+      <h1
+        class="text-3xl font-bold text-center text-black dark:text-white mb-8"
+      >
+        Fun Projects Showcase
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- AddToCart -->
+        <div
+          class="bg-white/30 dark:bg-black/20 rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div class="p-6 flex flex-col h-full">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              AddToCart
+            </h5>
+            <p class="text-gray-700 dark:text-gray-300 flex-grow">
+              A feature-rich Add to Cart web app with Wishlist functionality.
+            </p>
+            <a
+              href="https://codebyfaisal.github.io/funprojects/addtocart/"
+              target="_blank"
+              class="mt-4 inline-block w-full bg-black/80 dark:hover:bg-white/20 text-white py-2 px-4 rounded-md text-center font-medium hover:bg-black/70 transition-colors"
+              >View Live Demo</a
+            >
+          </div>
+        </div>
+        <!-- Calculator -->
+        <div
+          class="bg-white/30 dark:bg-black/20 rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div class="p-6 flex flex-col h-full">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              Calculator
+            </h5>
+            <p class="text-gray-700 dark:text-gray-300 flex-grow">
+              A sleek and interactive calculator web app.
+            </p>
+            <a
+              href="https://codebyfaisal.github.io/funprojects/calculator/"
+              target="_blank"
+              class="mt-4 inline-block w-full bg-black/80 dark:hover:bg-white/20 text-white py-2 px-4 rounded-md text-center font-medium hover:bg-black/70 transition-colors"
+              >View Live Demo</a
+            >
+          </div>
+        </div>
+        <!-- MyAge -->
+        <div
+          class="bg-white/30 dark:bg-black/20 rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div class="p-6 flex flex-col h-full">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              MyAge
+            </h5>
+            <p class="text-gray-700 dark:text-gray-300 flex-grow">
+              A web app to calculate age from date of birth with precision.
+            </p>
+            <a
+              href="https://codebyfaisal.github.io/funprojects/myage/"
+              target="_blank"
+              class="mt-4 inline-block w-full bg-black/80 dark:hover:bg-white/20 text-white py-2 px-4 rounded-md text-center font-medium hover:bg-black/70 transition-colors"
+              >View Live Demo</a
+            >
+          </div>
+        </div>
+        <!-- Password Generator -->
+        <div
+          class="bg-white/30 dark:bg-black/20 rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div class="p-6 flex flex-col h-full">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              Password Generator
+            </h5>
+            <p class="text-gray-700 dark:text-gray-300 flex-grow">
+              Generate secure passwords with customizable options.
+            </p>
+            <a
+              href="https://codebyfaisal.github.io/funprojects/password-generator/"
+              target="_blank"
+              class="mt-4 inline-block w-full bg-black/80 dark:hover:bg-white/20 text-white py-2 px-4 rounded-md text-center font-medium hover:bg-black/70 transition-colors"
+              >View Live Demo</a
+            >
+          </div>
+        </div>
+        <!-- Stickynoty -->
+        <div
+          class="bg-white/30 dark:bg-black/20 rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div class="p-6 flex flex-col h-full">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              Stickynoty
+            </h5>
+            <p class="text-gray-700 dark:text-gray-300 flex-grow">
+              A handy sticky notes app for quick note-taking.
+            </p>
+            <a
+              href="https://codebyfaisal.github.io/funprojects/stickynoty/"
+              target="_blank"
+              class="mt-4 inline-block w-full bg-black/80 dark:hover:bg-white/20 text-white py-2 px-4 rounded-md text-center font-medium hover:bg-black/70 transition-colors"
+              >View Live Demo</a
+            >
+          </div>
+        </div>
+        <!-- TodoApp -->
+        <div
+          class="bg-white/30 dark:bg-black/20 rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div class="p-6 flex flex-col h-full">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              TodoApp
+            </h5>
+            <p class="text-gray-700 dark:text-gray-300 flex-grow">
+              A well-designed to-do list application for productivity.
+            </p>
+            <a
+              href="https://codebyfaisal.github.io/funprojects/todoapp/"
+              target="_blank"
+              class="mt-4 inline-block w-full bg-black/80 dark:hover:bg-white/20 text-white py-2 px-4 rounded-md text-center font-medium hover:bg-black/70 transition-colors"
+              >View Live Demo</a
+            >
+          </div>
+        </div>
+        <!-- Serverless Security App -->
+        <div
+          class="bg-white/30 dark:bg-black/20 rounded-lg shadow-md overflow-hidden transform transition-transform hover:scale-105"
+        >
+          <div class="p-6 flex flex-col h-full">
+            <h5 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              Serverless Security
+            </h5>
+            <p class="text-gray-700 dark:text-gray-300 flex-grow">
+              Secure your app with serverless functions and hidden API keys.
+            </p>
+            <a
+              href="https://apiwithnetlify.netlify.app"
+              target="_blank"
+              class="mt-4 inline-block w-full bg-black/80 dark:hover:bg-white/20 text-white py-2 px-4 rounded-md text-center font-medium hover:bg-black/70 transition-colors"
+              >View Live Demo</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Dark/Light Mode Toggle Logic
+      const toggleButton = document.getElementById("mode-toggle");
+      const body = document.body;
+
+      // Check localStorage for saved mode
+      if (localStorage.getItem("mode") === "dark") {
+        body.classList.add("dark");
+        toggleButton.textContent = "Switch to Light Mode";
+      } else {
+        body.classList.remove("dark");
+        toggleButton.textContent = "Switch to Dark Mode";
+      }
+
+      // Toggle mode on button click
+      toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          toggleButton.textContent = "Switch to Light Mode";
+          localStorage.setItem("mode", "dark");
+        } else {
+          toggleButton.textContent = "Switch to Dark Mode";
+          localStorage.setItem("mode", "light");
+        }
+      });
+    </script>
+  </body>
 </html>
