@@ -1,0 +1,238 @@
+/* Fonts import and universal styles */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Body styles */
+body {
+  font-family: "Urbanist", sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Main and Game styles */
+main {
+  display: grid;
+  gap: 1vmin;
+}
+
+.game-name {
+  font-size: 7vmin;
+  padding: 1rem 0 2rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+}
+
+/* Player styles */
+.players {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 58vmin;
+  height: 11vmin;
+  font-size: 2.1vmin;
+  background: linear-gradient(135deg, #1f4068, #1b1b2f);
+  border-radius: 1vmin;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.players .player {
+  display: flex;
+  flex-direction: column;
+  padding: 1vmin;
+  color: white;
+}
+
+.players .turn-arrow {
+  font-size: 6vmin;
+  color: #ff6f61;
+  transition: transform 0.3s ease-in-out;
+}
+
+.players .turn-arrow.active {
+  transform: scale(1.2);
+}
+
+/* Container and Winner styles */
+.container {
+  margin: 0 auto;
+  width: 60vmin;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#winner {
+  position: absolute;
+  width: max-content;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  font-size: 0.001vmin;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+#winner.show {
+  opacity: 1;
+}
+
+/* Game and Game Starter styles */
+.game {
+  width: 58vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1vmin;
+  position: relative;
+}
+
+.game .game-starter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: block;
+}
+
+/* Box styles */
+.box {
+  height: 18vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vmin;
+  color: white;
+  background: linear-gradient(135deg, #1f4068, #1b1b2f);
+  border-radius: 1vmin;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1b1b2f, #1f4068);
+}
+
+.box[data-player="X"] {
+  color: #ff6f61;
+}
+
+.box[data-player="O"] {
+  color: #61dbfb;
+}
+
+/* Buttons styles */
+.buttons {
+  margin: 1vmin auto 0;
+  width: 59vmin;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.buttons .game-btn {
+  width: 18vmin;
+  color: white;
+  font-size: 2.2vmin;
+  letter-spacing: 1px;
+  padding: 1vmin 2vmin;
+  border-radius: 4vmin;
+  background: linear-gradient(135deg, #ff6f61, #61dbfb);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons .game-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #61dbfb, #ff6f61);
+}
+
+/* Start button animation */
+#start-btn {
+  animation: start-btn 1.5s infinite ease-in-out alternate-reverse;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+  .game-name {
+    font-size: 10vmin;
+  }
+  .players {
+    width: 79vmin;
+    font-size: 2.8vmin;
+  }
+  .container {
+    width: 90vmin;
+  }
+  .game {
+    width: 90vmin;
+    gap: 2vmin;
+  }
+  .box {
+    width: 25vmin;
+    height: 25vmin;
+  }
+  .buttons {
+    margin-top: 2vmin;
+    width: 79vmin;
+    .game-btn {
+      font-size: 3.2vmin;
+      width: 24vmin;
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .game-name {
+    position: absolute;
+    top: 0;
+  }
+}
+
+/* Keyframes for aurora animation */
+@keyframes aurora {
+  0% {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+  }
+  50% {
+    background: linear-gradient(135deg, #16213e, #1a1a2e);
+  }
+  100% {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+  }
+}
+
+/* Keyframes for start button animation */
+@keyframes start-btn {
+  from {
+    background: linear-gradient(135deg, #ff6f61, #61dbfb);
+  }
+  to {
+    background: linear-gradient(135deg, #61dbfb, #ff6f61);
+  }
+}
