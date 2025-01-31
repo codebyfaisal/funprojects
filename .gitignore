@@ -1,0 +1,30 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package lock files
+package-lock.json
+yarn.lock
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+
+# Netlify specific files
+# .netlify/
+
+# Misc
+*.log
