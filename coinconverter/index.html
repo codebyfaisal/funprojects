@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coinConverter</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/db93faee3d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- ========== Start Header Section ========== -->
+    <header id="header">
+      <div class="logo">
+        <h1>coinConverter</h1>
+      </div>
+    </header>
+    <!-- ========== End Header Section ========== -->
+
+    <!-- ========== Start main Section ========== -->
+    <main class="container">
+      <div class="converter">
+        <div class="category">
+          <button
+            id="fiat"
+            class="fiat-coin"
+            style="
+              border-radius: 0.5rem 0 0 0;
+              background-color: var(--primary-color);
+              color: white;
+              font-weight: normal;
+            "
+          >
+            Fiat
+          </button>
+          <button
+            disabled
+            id="crypto"
+            class="crypto-coin"
+            style="border-radius: 0 0.5rem 0 0; cursor: default"
+          >
+            Crypto
+          </button>
+        </div>
+        <form action="">
+          <div class="amount">
+            <label for="user-amount">Enter Amount</label>
+            <input type="text" value="1" id="user-amount" autocomplete="off" />
+            <p id="input-error">Please enter a valid numerical input</p>
+          </div>
+          <div class="dropdown">
+            <div class="from w-10">
+              <label for="">From</label>
+              <div class="select-container">
+                <img src="https://flagsapi.com/US/shiny/64.png" />
+                <select name="from"></select>
+              </div>
+            </div>
+            <div class="arrows w-10">
+              <button id="swipe-coin">
+                <i class="fa-solid fa-right-left"></i>
+              </button>
+            </div>
+            <div class="to w-10">
+              <label for="">To</label>
+              <div class="select-container">
+                <img src="https://flagsapi.com/PK/shiny/64.png" />
+                <select name="to"></select>
+              </div>
+            </div>
+          </div>
+          <div class="result">
+            <p id="exchange-rate">
+              <span style="text-align: right">0</span>
+              <i class="fa-solid fa-equals" style="text-align: center"></i>
+              <span style="text-align: left">0</span>
+            </p>
+            <div class="date-box">
+              <p>
+                <span>last updated on</span><br /><span id="date">0/0/0</span>
+              </p>
+            </div>
+          </div>
+          <button id="convert-btn">Convert</button>
+        </form>
+      </div>
+    </main>
+    <!-- ========== End main Section ========== -->
+
+    <!-- ========== Start footer Section ========== -->
+    <footer></footer>
+    <!-- ========== End footer Section ========== -->
+    <script src="codes.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
